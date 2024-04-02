@@ -66,6 +66,7 @@
                 //console.log(credentials);
                 get(child(dbref, 'UserAuthList/' + credentials.user.uid)).then((snapshot)=>{
                     if(snapshot.exists){
+                        alert("I'm here");
                         sessionStorage.setItem("user-info", JSON.stringify({
                             firstname: snapshot.val().firstname,
                             lastname: snapshot.val().lastname
